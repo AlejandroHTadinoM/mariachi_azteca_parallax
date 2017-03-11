@@ -5,6 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css?family=Arizonia");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -823,5 +824,38 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+.spacer {
+  width: 100%;
+  height: 150vh; }
+
 body {
-  background-color: pink; }
+  background-color: #FAFAFA; }
+
+.banner-box {
+  width: 100%;
+  height: 95vh;
+  position: relative;
+  overflow: hidden; }
+  .banner-box .page-title {
+    font-family: 'Arizonia', cursive;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 20%; }
+  .banner-box .flag-video-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10; }
+    .banner-box .flag-video-container:before {
+      content: "";
+      z-index: 100;
+      display: block;
+      background: radial-gradient(circle farthest-corner at right bottom, #55bbf1 0, #39afef 100%);
+      opacity: .94; }
+    .banner-box .flag-video-container .flag-video {
+      margin: auto;
+      min-width: 100%;
+      height: 100%; }

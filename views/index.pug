@@ -11,13 +11,31 @@ html(lang="es")
 
 	body
 
-		header
-			h1 titiulo
+		//- Header
+
+		header.banner-box
+			.parallax-header
+				h1.page-title Mariachi Azteca
+			
+			.flag-video-container
+				video.flag-video(playsinline, autoplay, muted, loop)
+					source(src="video/flag.webm")
 
 		//- Content
 
-		section.content
+		section.cantent
 
 			article
 
-				h1 Contenido
+				.about
+					.container
+
+						h1 Quienes somos?
+						hr
+
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iure veniam officiis eum quidem enim ipsam ea perspiciatis nobis error totam reprehenderit consectetur odio consequuntur earum accusamus fuga, quo temporibus.
+
+		.spacer
+
+	script(src="js/jquery.min.js")
+	script(src="js/functions.js")
