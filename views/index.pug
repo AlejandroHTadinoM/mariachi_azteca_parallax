@@ -13,13 +13,33 @@ html(lang="es")
 
 		//- Header
 
+		nav
+			.container
+				.row
+					.four.columns
+						h1
+							a(href="#")
+								img.brand(src="//placehold.it/64x64")
+					.eight.columns
+						ul.nav-container
+							li.nav-item
+								a(href="#") link-1
+							li.nav-item
+								a(href="#") link-2
+							li.nav-item
+								a(href="#") link-3
+
 		header.banner-box
 			.parallax-header
-				h1.page-title Mariachi Azteca
+				.page-title 
+					h1 Mariachi Azteca
+					hr
+					p La tradicion de Mexico en Panama
 			
 			.flag-video-container
 				video.flag-video(playsinline, autoplay, muted, loop)
 					source(src="video/flag.webm")
+				.video-overlay
 
 		//- Content
 

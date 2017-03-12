@@ -10,18 +10,23 @@ body
     background-color: #FAFAFA
 
 .banner-box
-    //background: linear-gradient(90deg, green 33.333%, white 33.333%, red 33.333%)
     width: 100%
     height: 95vh
     position: relative
     overflow: hidden
 
     .page-title
-        font-family: 'Arizonia', cursive
+        color: #FAFAFA
         width: 100%
         text-align: center
         position: absolute
         top: 20%
+
+        h1
+            font-family: 'Arizonia', cursive
+
+        hr
+            width: 30%
 
     .flag-video-container
         position: absolute
@@ -29,16 +34,36 @@ body
         right: 0
         bottom: 0
         left: 0
-        z-index: -10
-
-        &:before
-            content: ""
-            z-index: 100
-            display: block
-            background: radial-gradient(circle farthest-corner at right bottom,#55bbf1 0,#39afef 100%)
-            opacity: .94
+        z-index: -1
 
         .flag-video
             margin: auto
             min-width: 100%
-            height: 100%
+            min-height: 100%
+            width: auto
+            height: auto
+        
+        .video-overlay
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            background: rgba(0, 0, 0, .8)
+        
+nav
+    position: fixed
+    width: 100%
+    z-index: 10
+
+    .nav-container
+        text-align: right
+
+    .nav-item
+        display: inline-block
+        margin-left: 5px
+        padding: 1rem
+        list-style-type: none
+
+        a
+            text-decoration: none

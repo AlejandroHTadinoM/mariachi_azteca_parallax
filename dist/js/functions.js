@@ -5,7 +5,7 @@ $(window).scroll(function () {
 
     if (wScroll <= hContainerHeight ) {
         $('.page-title').css({
-            'transform': 'translate(0px, ' +  (wScroll * 1.2) + '%)'
+            'transform': 'translate(0px, ' +  (wScroll / 2) + '%)'
         });
     }
 });
