@@ -831,11 +831,39 @@ there.
 body {
   background-color: #FAFAFA; }
 
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: all .5s linear; }
+  nav .brand {
+    height: 100px;
+    transition: all .3s linear; }
+  nav .nav-container {
+    text-align: right; }
+    nav .nav-container .nav-item {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 1rem 2rem;
+      list-style-type: none;
+      text-transform: uppercase; }
+      nav .nav-container .nav-item a {
+        text-decoration: none;
+        color: #FAFAFA; }
+      nav .nav-container .nav-item:hover {
+        background: #FFF; }
+        nav .nav-container .nav-item:hover a {
+          color: #000; }
+
 .banner-box {
   width: 100%;
-  height: 95vh;
+  height: 90vh;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../img/banner-bw.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
   .banner-box .page-title {
     color: #FAFAFA;
     width: 100%;
@@ -843,7 +871,9 @@ body {
     position: absolute;
     top: 20%; }
     .banner-box .page-title h1 {
-      font-family: 'Arizonia', cursive; }
+      font-family: 'Arizonia', cursive;
+      font-size: 6em;
+      font-weight: 700; }
     .banner-box .page-title hr {
       width: 30%; }
   .banner-box .flag-video-container {
@@ -867,16 +897,14 @@ body {
       left: 0;
       background: rgba(0, 0, 0, 0.8); }
 
-nav {
-  position: fixed;
-  width: 100%;
-  z-index: 10; }
-  nav .nav-container {
-    text-align: right; }
-  nav .nav-item {
-    display: inline-block;
-    margin-left: 5px;
-    padding: 1rem;
-    list-style-type: none; }
-    nav .nav-item a {
-      text-decoration: none; }
+.about {
+  margin-top: 100px;
+  background-color: green; }
+  .about:before {
+    content: " ";
+    transform: rotate(6deg);
+    background-color: green; }
+  .about:after {
+    content: " ";
+    transform: rotate(-6deg);
+    background-color: green; }
