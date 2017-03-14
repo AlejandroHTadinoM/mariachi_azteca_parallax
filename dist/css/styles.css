@@ -853,7 +853,8 @@ there.
 
 body {
   background-color: #FAFAFA;
-  color: #212121; }
+  color: #212121;
+  box-sizing: border-box; }
 
 section {
   padding: 100px 0 100px 0; }
@@ -863,7 +864,7 @@ section {
   width: 100%;
   background-color: #212121;
   color: #FAFAFA;
-  background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.3)), url("/img/banner-1.jpg");
+  background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.3)), url("../img/banner-1.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -878,14 +879,12 @@ section {
   animation: flag 3s linear infinite !important; }
 
 .section-services {
-  background-color: pink;
   text-align: center; }
   .section-services .service {
     margin-bottom: 60px;
     transition: all .5s ease-in-out; }
     .section-services .service:hover {
-      transform: scale(1.2);
-      padding: 1rem; }
+      transform: scale(1.1); }
 
 video {
   width: 100%; }

@@ -36,6 +36,7 @@ $flag-green: #006847
 body
     background-color: #FAFAFA
     color: #212121
+    box-sizing: border-box
 
 section
     padding: 100px 0 100px 0
@@ -45,7 +46,7 @@ section
     width: 100%
     background-color: #212121
     color: #FAFAFA
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .3)), url("/img/banner-1.jpg")
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .3)), url("../img/banner-1.jpg")
         size: cover
         attachment: fixed
         repeat: no-repeat
@@ -62,7 +63,6 @@ section
     animation: flag 3s linear infinite !important
 
 .section-services
-    background-color: pink
     text-align: center
 
     .service
@@ -70,8 +70,7 @@ section
         transition: all .5s ease-in-out
 
         &:hover
-            transform: scale(1.2)
-            padding: 1rem
+            transform: scale(1.1)
 
 // Custom Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
