@@ -5,7 +5,9 @@ var brandHeight = $('.brand').height();
 $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
 
-    if (wScroll >= windowHeight) {
+    console.log(wScroll);
+
+    if (wScroll >= (windowHeight - brandHeight)) {
         $('.brand').css({
             'height': ( brandHeight / 2 )
         });

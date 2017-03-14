@@ -63,8 +63,7 @@ gulp.task('serve', ['pug', 'sass', 'concat'], function () {
 	bs.init({
 		server: {
 			baseDir: 'dist/'
-		},
-		browser: "firefox"
+		}
 	});
 });
 
