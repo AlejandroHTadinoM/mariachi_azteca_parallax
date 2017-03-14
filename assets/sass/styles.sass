@@ -1,104 +1,84 @@
 @import "normalize"
 @import "skeleton"
-@import url('https://fonts.googleapis.com/css?family=Arizonia')
+//@import url('https://fonts.googleapis.com/css?family=Raleway')
+
+$flag-red: #CE1126
+$flag-green: #006847
 
 .spacer
     width: 100%
     height: 150vh
 
-body
-    background-color: #FAFAFA
-
-
-nav
+.stycky
     position: fixed
     width: 100%
     z-index: 10
-    transition: all .5s linear
 
-    .brand
-        height: 100px
-        transition: all .3s linear
+.section-title
+    margin-bottom: 70px
+    padding: 2rem
+    border-bottom: 1px solid #FAFAFA
 
-    .nav-container
-        text-align: right
+@keyframes flag
+    0%
+        color: $flag-green
+        border-color: $flag-green
+    33.33%
+        color: white
+        border-color: white
+    66.66%
+        color: $flag-red
+        border-color: $flag-red
+    100%
+        color: $flag-green
+        border-color: $flag-green
 
-        .nav-item
-            display: inline-block
-            margin-left: 5px
-            padding: 1rem 2rem
-            list-style-type: none
-            text-transform: uppercase
+body
+    background-color: #FAFAFA
+    color: #212121
 
-            a
-                text-decoration: none
-                color: #FAFAFA
+section
+    padding: 100px 0 100px 0
 
-            &:hover
-                background: #FFF
-
-                a
-                    color: #000
-
-.banner-box
+.banner
+    height: 100vh
     width: 100%
-    height: 90vh
-    position: relative
-    overflow: hidden
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .9)), url("../img/banner-bw.jpg") 
+    background-color: #212121
+    color: #FAFAFA
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .3)), url("/img/banner-1.jpg")
         size: cover
-        repeat: no-repeat
         attachment: fixed
+        repeat: no-repeat
+    overflow: hidden
 
     .page-title
-        color: #FAFAFA
-        width: 100%
-        text-align: center
-        position: absolute
-        top: 20%
+        font:
+            weight: 700
+            size: 5em
+        margin-top: 50%
 
-        h1
-            font:
-                family: 'Arizonia', cursive
-                size: 6em
-                weight: 700
+.btn-flag, .page-lead
+    color: blue
+    animation: flag 3s linear infinite !important
 
-        hr
-            width: 30%
+.section-services
+    background-color: pink
+    text-align: center
 
-    .flag-video-container
-        position: absolute
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-        z-index: -1
+    .service
+        margin-bottom: 60px
+        transition: all .5s ease-in-out
 
-        .flag-video
-            margin: auto
-            min-width: 100%
-            min-height: 100%
-            width: auto
-            height: auto
-        
-        .video-overlay
-            position: absolute
-            top: 0
-            right: 0
-            bottom: 0
-            left: 0
-            background: rgba(0, 0, 0, .8)
+        &:hover
+            transform: scale(1.2)
+            padding: 1rem
 
-.about
-    margin-top: 100px
-    background-color: green
+// Custom Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
 
-    &:before
-        content: " "
-        transform: rotate(6deg)
-        background-color: green
 
-    &:after
-        content: " "
-        transform: rotate(-6deg)
-        background-color: green
+// Testing
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
+
+video
+    width: 100%

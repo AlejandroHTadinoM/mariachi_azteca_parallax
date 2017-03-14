@@ -4,69 +4,61 @@ html(lang="es")
 	head
 		meta(charset="utf-8")
 		title Mariachi Azteca
-		meta(name="description", content="")
-		meta(name="author", content="")
+		meta(name="description", content="Mariachi Azteca de Panama, con toda la tradicion de Mexico")
+		meta(name="author", content="Alejandro H Tadino M")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(rel='stylesheet' href='css/styles.css')
 
 	body
 
-		//- Header
-
-		nav
-			.container
-				.row
-					.four.columns
-						h1
-							a(href="#")
-								img.brand(src="//placehold.it/100x100")
-					.eight.columns
-						ul.nav-container
-							li.nav-item
-								a(href="#") nosotros
-							li.nav-item
-								a(href="#") performance
-							li.nav-item
-								a(href="#") contacto
-
-		header.banner-box
-			.parallax-header
-				.page-title 
-					h1 Mariachi Azteca
-					hr
-					p La tradición de Mexico en Panama
-			
-			//-.flag-video-container
-				video.flag-video(playsinline, autoplay, muted, loop)
-					source(src="video/flag.webm")
-				.video-overlay
-
 		//- Content
 
-		section.cantent
+		header
 
-			article
-
-				.about
-
+			.banner
+				.container
 					.row
-						.four.colunms
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam modi error dignissimos suscipit, debitis accusamus reprehenderit aut molestias, labore enim doloremque impedit quaerat ullam voluptas molestiae quidem delectus nihil consectetur?
+						.seven.columns
+							.cta-container
+								h1.page-title Mariachi Azteca de Panama
+								p.page-lead La tradicion de Mexico en Panama
+								a(href="#").button.btn-flag Contactos
 
-						.four.colunms
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam modi error dignissimos suscipit, debitis accusamus reprehenderit aut molestias, labore enim doloremque impedit quaerat ullam voluptas molestiae quidem delectus nihil consectetur?
-							
-						.four.colunms
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam modi error dignissimos suscipit, debitis accusamus reprehenderit aut molestias, labore enim doloremque impedit quaerat ullam voluptas molestiae quidem delectus nihil consectetur?
-							
-					.container
+		section.section-services
+			.container
+				h2.section-title Servicios
 
-						h1 Quienes somos?
-						hr
+				.row
 
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iure veniam officiis eum quidem enim ipsam ea perspiciatis nobis error totam reprehenderit consectetur odio consequuntur earum accusamus fuga, quo temporibus.
+					.four.columns
+						.service
+							img(src="//placehold.it/150x150")
+							h3.srvice-title Celebraciones
+							p Amenizamos todo tipo de celebraciones: bodas, cumpleaños, bautizos, comuniones, día de la madre, del padre, serenatas de reconciliación, conquista, serenatas de despedida (o bienvenida) reuniones de empresas, lanzamientos de productos, aperturas de negocios, despedidas de soltero (a), celebración de divorcios y cualquier motivo que para usted sea de celebración.
 
+					.four.columns
+						.service
+							img(src="//placehold.it/150x150")
+							h3.srvice-title A domicilio
+							p Nos trasladamos al lugar donde ud. indique dentro de Panamá, hoteles, restaurantes, domicilio, empresas. Nuestro profesionalismo y experiencia, garantizan un excelente trabajo, todo esto aunado a un grupo de músicos con vasta experiencia.
+
+					.four.columns
+						.service
+							img(src="//placehold.it/150x150")
+							h3.srvice-title Los mejores musicos
+							p Es así queridos amigos que esta familia de músicos, se presenta de una manera particular hacia ustedes, exponiendo en esta página, todo aquello que podemos brindarle para realzar su compromiso. Esperamos sea de vuestro agrado todo lo visto en la misma y podamos pronto estar compartiendo una alegría común. Gracias por preferirnos.
+
+		section.section-media
+			.container
+				.row
+					.twelve.columns
+						video
+							source(src="//www.youtube.com/embed/V2ctpcnv8Es")
+				.row
+					.twelve.columns
+						iframe(width="100%" height="480px" src="https://www.youtube.com/embed/vi0r1NtL5y0" frameborder="0" allowfullscreen)
+						
 		.spacer
 
-	script(src="js/jquery.min.js")
-	script(src="js/functions.js")
+		script(src="js/jquery.min.js")
+		script(src="js/functions.js")

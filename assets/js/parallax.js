@@ -1,38 +1,12 @@
 var windowHeight = $(window).height();
-var hContainerHeight = $('.banner-box').height();
+var hContainerHeight = $('.banner').height();
 var brandHeight = $('.brand').height();
 
 $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
-
     console.log(wScroll);
 
-    if (wScroll >= (windowHeight - brandHeight)) {
-        $('.brand').css({
-            'height': ( brandHeight / 2 )
-        });
-        
-        $('nav').css({
-            'background': 'rgba(0, 0, 0, .6)'
-        })
-
-    } else {
-        $('.brand').css({
-            'height': ( brandHeight )
-        });
-
-        $('nav').css({
-            'background': 'transparent'
-        })
-    }
-
-    if (wScroll <= hContainerHeight ) {
-        $('.page-title').css({
-            'transform': 'translate(0px, ' +  (wScroll / 2) + '%)'
-        });
-
-        $('.banner-box').css({
-            'background-position': '0% ' + (wScroll / 8) + '%'
-        });
-    }
+    $('.cta-container').css({
+        'transform': 'translate(0px, ' + (wScroll / 8) + '%)'
+    });
 });

@@ -5,7 +5,6 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url("https://fonts.googleapis.com/css?family=Arizonia");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -828,83 +827,65 @@ there.
   width: 100%;
   height: 150vh; }
 
-body {
-  background-color: #FAFAFA; }
-
-nav {
+.stycky {
   position: fixed;
   width: 100%;
-  z-index: 10;
-  transition: all .5s linear; }
-  nav .brand {
-    height: 100px;
-    transition: all .3s linear; }
-  nav .nav-container {
-    text-align: right; }
-    nav .nav-container .nav-item {
-      display: inline-block;
-      margin-left: 5px;
-      padding: 1rem 2rem;
-      list-style-type: none;
-      text-transform: uppercase; }
-      nav .nav-container .nav-item a {
-        text-decoration: none;
-        color: #FAFAFA; }
-      nav .nav-container .nav-item:hover {
-        background: #FFF; }
-        nav .nav-container .nav-item:hover a {
-          color: #000; }
+  z-index: 10; }
 
-.banner-box {
+.section-title {
+  margin-bottom: 70px;
+  padding: 2rem;
+  border-bottom: 1px solid #FAFAFA; }
+
+@keyframes flag {
+  0% {
+    color: #006847;
+    border-color: #006847; }
+  33.33% {
+    color: white;
+    border-color: white; }
+  66.66% {
+    color: #CE1126;
+    border-color: #CE1126; }
+  100% {
+    color: #006847;
+    border-color: #006847; } }
+
+body {
+  background-color: #FAFAFA;
+  color: #212121; }
+
+section {
+  padding: 100px 0 100px 0; }
+
+.banner {
+  height: 100vh;
   width: 100%;
-  height: 90vh;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url("../img/banner-bw.jpg");
+  background-color: #212121;
+  color: #FAFAFA;
+  background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.3)), url("/img/banner-1.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-attachment: fixed; }
-  .banner-box .page-title {
-    color: #FAFAFA;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 20%; }
-    .banner-box .page-title h1 {
-      font-family: 'Arizonia', cursive;
-      font-size: 6em;
-      font-weight: 700; }
-    .banner-box .page-title hr {
-      width: 30%; }
-  .banner-box .flag-video-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1; }
-    .banner-box .flag-video-container .flag-video {
-      margin: auto;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto; }
-    .banner-box .flag-video-container .video-overlay {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.8); }
+  overflow: hidden; }
+  .banner .page-title {
+    font-weight: 700;
+    font-size: 5em;
+    margin-top: 50%; }
 
-.about {
-  margin-top: 100px;
-  background-color: green; }
-  .about:before {
-    content: " ";
-    transform: rotate(6deg);
-    background-color: green; }
-  .about:after {
-    content: " ";
-    transform: rotate(-6deg);
-    background-color: green; }
+.btn-flag, .page-lead {
+  color: blue;
+  animation: flag 3s linear infinite !important; }
+
+.section-services {
+  background-color: pink;
+  text-align: center; }
+  .section-services .service {
+    margin-bottom: 60px;
+    transition: all .5s ease-in-out; }
+    .section-services .service:hover {
+      transform: scale(1.2);
+      padding: 1rem; }
+
+video {
+  width: 100%; }
