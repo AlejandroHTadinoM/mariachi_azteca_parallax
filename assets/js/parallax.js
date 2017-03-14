@@ -7,6 +7,6 @@ $(window).scroll(function () {
     console.log(wScroll);
 
     $('.cta-container').css({
-        'transform': 'translate(0px, ' + (wScroll / 8) + '%)'
+        'transform': 'translate(0px, ' + (wScroll / 4) + '%)'
     });
 });

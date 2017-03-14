@@ -23,12 +23,15 @@ $flag-green: #006847
     0%
         color: $flag-green
         border-color: $flag-green
+
     33.33%
         color: white
         border-color: white
+
     66.66%
         color: $flag-red
         border-color: $flag-red
+
     100%
         color: $flag-green
         border-color: $flag-green
@@ -59,7 +62,6 @@ section
         margin-top: 50%
 
 .btn-flag, .page-lead
-    color: blue
     animation: flag 3s linear infinite !important
 
 .section-services
@@ -71,6 +73,23 @@ section
 
         &:hover
             transform: scale(1.1)
+
+.section-media
+
+    .video-container
+        margin-top: 25px
+        position: relative
+        padding-bottom: 56.25%
+
+        .video
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+
+    .video-description
+        background-color: pink
 
 // Custom Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– //

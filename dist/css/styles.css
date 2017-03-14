@@ -875,7 +875,6 @@ section {
     margin-top: 50%; }
 
 .btn-flag, .page-lead {
-  color: blue;
   animation: flag 3s linear infinite !important; }
 
 .section-services {
@@ -885,6 +884,20 @@ section {
     transition: all .5s ease-in-out; }
     .section-services .service:hover {
       transform: scale(1.1); }
+
+.section-media .video-container {
+  margin-top: 25px;
+  position: relative;
+  padding-bottom: 56.25%; }
+  .section-media .video-container .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.section-media .video-description {
+  background-color: pink; }
 
 video {
   width: 100%; }
