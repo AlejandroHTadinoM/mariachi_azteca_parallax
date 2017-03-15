@@ -1,23 +1,34 @@
+// Imports
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
 @import "normalize"
 @import "skeleton"
-//@import url('https://fonts.googleapis.com/css?family=Raleway')
+@import url('https://fonts.googleapis.com/css?family=Raleway')
 
+// Vars
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
 $flag-red: #CE1126
 $flag-green: #006847
+
+// Helper class
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .spacer
     width: 100%
     height: 150vh
 
-.stycky
+.sticky
     position: fixed
-    //width: 100%
+    top: 0
+    width: 100%
     z-index: 10
 
 .section-title
     margin-bottom: 70px
     padding: 2rem
     border-bottom: 1px solid #FAFAFA
+
+// Custom Animations
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 @keyframes flag
     0%
@@ -44,6 +55,9 @@ body
 section
     padding: 100px 0 100px 0
 
+// Section: Banner
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
+
 .banner
     height: 100vh
     width: 100%
@@ -64,17 +78,32 @@ section
 .btn-flag, .page-lead
     animation: flag 3s linear infinite !important
 
+// Navigation bar
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
+
 .nav-bar
-    border-bottom: 1px solid #212121
+    background: linear-gradient(90deg, $flag-green 33.33%, white 33.33%, white 66.66%, $flag-red 66.66%, $flag-red)
 
     .nav-wrap
         text-align: center
         padding-top: 1rem
 
-        li
+        .nav-item
             display: inline-block
             margin: 1rem 0
             padding: 1rem 1.5rem
+            transition: all .5s linear
+            border-bottom: 3px solid transparent
+
+            a
+                color: #212121
+                text-decoration: none
+
+            &:hover
+                border-bottom: 3px solid #444
+
+// Section: Services
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .section-services
     text-align: center
@@ -85,6 +114,9 @@ section
 
         &:hover
             transform: scale(1.1)
+
+// Section: Media
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .section-media
 
@@ -106,9 +138,7 @@ section
 // Custom Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
+@media (min-width: 400px)
 
-// Testing
-–––––––––––––––––––––––––––––––––––––––––––––––––– //
-
-video
-    width: 100%
+    .nav-item
+        display: block

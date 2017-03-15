@@ -5,25 +5,25 @@ var navPos = $('.nav-bar').offset().top;
 
 $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
-    console.log(wScroll);
-
-    if (wScroll <= (bannerHeight - $('.nav-bar').height())) {
+    
+    if (wScroll <= bannerHeight) {
 
         $('.cta-container').css({
+
             'transform': 'translate(0px, ' + (wScroll / 4) + '%)'
+
         });
 
     };
 
-    if (wScroll >= navPos - 200) {
-        $('.nav-bar').css({
-            'position': 'fixed',
-            'margin': 'auto'
-        })
+    if (wScroll >= navPos) {
+
+        $('.nav-bar').addClass('sticky');
+
     } else {
-        $('.nav-bar').css({
-            'position': 'relative'
-        })
+
+        $('.nav-bar').removeClass('sticky');
+
     };
 
     
