@@ -33,15 +33,23 @@ var navPos = $('.nav-bar').offset().top;
 
 $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
+<<<<<<< HEAD
 
     if (wScroll <= (bannerHeight - $('.nav-bar').height())) {
+=======
+    
+    if (wScroll <= bannerHeight) {
+>>>>>>> e9e4af06afd4c43334f46048152eff8665fd94d1
 
         $('.cta-container').css({
+
             'transform': 'translate(0px, ' + (wScroll / 4) + '%)'
+
         });
 
     };
 
+<<<<<<< HEAD
     $('nav').wrap('<div class="nav-wrapper"></div>');
 
     $('.nav-wrapper').height($('nav').height());
@@ -56,6 +64,16 @@ $(window).scroll(function () {
         $('.nav-bar').css({
             'background': 'transparent'
         });
+=======
+    if (wScroll >= navPos) {
+
+        $('.nav-bar').addClass('sticky');
+
+    } else {
+
+        $('.nav-bar').removeClass('sticky');
+
+>>>>>>> e9e4af06afd4c43334f46048152eff8665fd94d1
     };
 
 });

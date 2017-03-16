@@ -828,7 +828,11 @@ there.
   width: 100%;
   height: 150vh; }
 
+<<<<<<< HEAD
 .stk {
+=======
+.sticky {
+>>>>>>> e9e4af06afd4c43334f46048152eff8665fd94d1
   position: fixed;
   top: 0;
   width: 100%;
@@ -880,7 +884,11 @@ section {
   animation: flag 3s linear infinite !important; }
 
 .nav-bar {
+<<<<<<< HEAD
   background: transparent; }
+=======
+  background: linear-gradient(90deg, #006847 33.33%, white 33.33%, white 66.66%, #CE1126 66.66%, #CE1126); }
+>>>>>>> e9e4af06afd4c43334f46048152eff8665fd94d1
   .nav-bar .nav-wrap {
     text-align: center;
     padding-top: 1rem; }
@@ -918,6 +926,10 @@ section {
 .section-media .video-description {
   background-color: pink; }
 
+<<<<<<< HEAD
 @media (max-width: 400px) {
+=======
+@media (min-width: 400px) {
+>>>>>>> e9e4af06afd4c43334f46048152eff8665fd94d1
   .nav-item {
     display: block; } }
