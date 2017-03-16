@@ -5,7 +5,6 @@ var navPos = $('.nav-bar').offset().top;
 
 $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
-    console.log(wScroll);
 
     if (wScroll <= (bannerHeight - $('.nav-bar').height())) {
 
@@ -15,19 +14,20 @@ $(window).scroll(function () {
 
     };
 
-    $('.nav-bar').wraper('<div class="nav-wrapper"></div>');
+    $('nav').wrap('<div class="nav-wrapper"></div>');
 
-    if (wScroll >= navPos - 200) {
+    $('.nav-wrapper').height($('nav').height());
 
+    if (wScroll >= navPos) {
+        $('.nav-bar').addClass('stk');
         $('.nav-bar').css({
-            'position': 'fixed',
-            'margin': 'auto'
-        })
+            'background': 'linear-gradient(90deg, $flag-green 33.33%, white 33.33%, white 66.66%, $flag-red 66.66%, $flag-red)'
+        });
     } else {
+        $('.nav-bar').removeClass('stk');
         $('.nav-bar').css({
-            'position': 'relative'
-        })
+            'background': 'transparent'
+        });
     };
 
-    
 });
