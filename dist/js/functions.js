@@ -43,7 +43,10 @@ $(window).scroll(function () {
 
     };
 
+    $('.nav-bar').wraper('<div class="nav-wrapper"></div>');
+
     if (wScroll >= navPos - 200) {
+
         $('.nav-bar').css({
             'position': 'fixed',
             'margin': 'auto'
