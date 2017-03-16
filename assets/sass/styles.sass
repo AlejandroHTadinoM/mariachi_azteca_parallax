@@ -2,7 +2,8 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 @import "normalize"
 @import "skeleton"
-@import url('https://fonts.googleapis.com/css?family=Raleway')
+@import "animate"
+@import url('https://fonts.googleapis.com/css?family=Quicksand')
 
 // Vars
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
@@ -21,30 +22,35 @@ $flag-green: #006847
     top: 0
     width: 100%
     z-index: 10
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .4)
 
 .section-title
     margin-bottom: 70px
     padding: 2rem
-    border-bottom: 1px solid #FAFAFA
+    text-align: center
 
 // Custom Animations
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
-@keyframes flag
+@keyframes flag-btn
     0%
-        color: $flag-green
+        background-color: $flag-green
+        color: white
         border-color: $flag-green
 
     33.33%
-        color: white
+        background-color: white
+        color: #212121
         border-color: white
 
     66.66%
-        color: $flag-red
+        background-color: $flag-red
+        color: white
         border-color: $flag-red
 
     100%
-        color: $flag-green
+        background-color: $flag-green
+        color: white
         border-color: $flag-green
 
 body
@@ -67,6 +73,7 @@ section
         size: cover
         attachment: fixed
         repeat: no-repeat
+        position: center center
     overflow: hidden
 
     .page-title
@@ -75,15 +82,16 @@ section
             size: 5em
         margin-top: 50%
 
-.btn-flag, .page-lead
-    animation: flag 3s linear infinite !important
+    .btn-flag
+        animation: flag-btn 24s linear infinite !important
 
 // Navigation bar
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .nav-bar
-    transition: all .5s ease-in-out
-    
+    transition: all .5s ease-in-out !important
+    background: linear-gradient(90deg, #CE1126 30.0%, #FFFFFF 30.0%, #FFFFFF 69.0%, #006847 69.0%, #006847)
+
     .nav-wrap
         text-align: center
         padding-top: 1rem
@@ -112,13 +120,22 @@ section
         margin-bottom: 60px
         transition: all .5s ease-in-out
 
+        p
+            text-align: justify
+
         &:hover
             transform: scale(1.1)
+            background-color: #FAFAFA
 
 // Section: Media
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .section-media
+    background: linear-gradient(90deg, rgba(#CE1126, .7) 30.0%, rgba(#FFFFFF, .7) 30.0%, rgba(#FFFFFF, .7) 69.0%, rgba(#006847, .7) 69.0%, rgba(#006847, .7)), url("../img/banner-6.JPG")
+        size: cover
+        attachment: fixed
+        repeat: no-repeat
+        position: center center
 
     .video-container
         margin-top: 25px
@@ -133,7 +150,36 @@ section
             height: 100%
 
     .video-description
-        background-color: pink
+        background-color: #FAFAFA
+        transition: all .5s ease-in-out
+
+        &:hover
+            transform: scale(1.2)
+
+        .description-wrap
+            text-align: center
+            padding: 1rem
+
+footer
+    text-align: center
+
+    ul
+        list-style-type: none
+
+        li
+            padding: 3rem 0
+            font-size: 1.1em
+            margin-top: 2rem
+
+            &:hover
+                background-color: #ccc
+
+            a
+                text-decoration: none
+                color: #444
+
+                &:hover
+                    color: #444
 
 // Custom Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– //

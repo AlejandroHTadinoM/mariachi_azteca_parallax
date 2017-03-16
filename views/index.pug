@@ -23,16 +23,16 @@ html(lang="es")
 								p.page-lead La tradicion de Mexico en Panam&aacute
 								a(href="#").button.btn-flag Contactos
 
-		nav.nav-bar(style"transition: all .5s ease-in-out;")
+		nav.nav-bar
 			.container
 				.row
 					.twelve.columns
 						.nav-wrap
 							ul
 								li.nav-item
-									a(href="#") servicios
+									a(href="#servicios") servicios
 								li.nav-item
-									a(href="#") videos
+									a(href="#media") videos
 								li.nav-item
 									a(href="#") integrantes
 								li.nav-item
@@ -40,7 +40,7 @@ html(lang="es")
 		
 		//- Content
 
-		section.section-services
+		section.section-services#servicios
 			.container
 				h2.section-title Servicios
 
@@ -64,24 +64,54 @@ html(lang="es")
 							h3.srvice-title Los mejores musicos
 							p Es así queridos amigos que esta familia de músicos, se presenta de una manera particular hacia ustedes, exponiendo en esta página, todo aquello que podemos brindarle para realzar su compromiso. Esperamos sea de vuestro agrado todo lo visto en la misma y podamos pronto estar compartiendo una alegría común. Gracias por preferirnos.
 
-		section.section-media
+		section.section-media#media
 			.container
+				h2.section-title Videos
 				.row
 					.twelve.columns
 						.video-container
 							iframe(src="//www.youtube.com/embed/V2ctpcnv8Es" frameborder="0" allowfullscreen).video
 
 						.video-description
-							h4 video description
-							p Mariachi Azteca de Panam&aacute, en el programa de Augusto, Canal 21 RCM - Panam&aacute
+							.description-wrap
+								h4 Si Nos Dejan
+								p Mariachi Azteca de Panam&aacute, en el programa de Augusto, Canal 21 RCM - Panam&aacute
 				.row
 					.twelve.columns
 						.video-container
 							iframe(src="//www.youtube.com/embed/vi0r1NtL5y0" frameborder="0" allowfullscreen).video
 
 						.video-description
-							h4 video description
-							p meta
+							.description-wrap
+								h4 Si Nos Dejan
+								p Lenin Rios canta Si Nos Dejan en Vive la Musica
+
+		section.section-band
+			.container
+				|Luis Enrique Espinosa: Director y Trompetista
+				|Alejandro Castillo:	Trompeta
+				|Angel Díaz:	Violin
+				|Robert de León:	Bajo
+				|Daniel Méndez:	Requinto y Voz
+				|Jhonny Méndez:	Vihuela y Voz
+
+
+		footer.section-footer
+			.container
+				.row
+					.four.columns
+						ul 
+							li
+								a(href="//www.facebook.com/Mariachi-Azteca-De-Panam%C3%A1-189562241392131/?fref=ts") Facebook
+					.four.columns
+						ul
+							li
+								a(href="mailto:mazt0505@gmail.com ") mazt0505@gmail.com 
+					.four.columns
+						ul
+							li
+								a(href="tel:+507-6677-5936") +507-6677-5936
+
 		.spacer
 
 		script(src="js/jquery.min.js")

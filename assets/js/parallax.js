@@ -1,4 +1,5 @@
 var navPos = $('.nav-bar').offset().top;
+$('nav').wrap('<div class="nav-wrapper"></div>');
 
 $(window).scroll(function () {
 
@@ -7,25 +8,21 @@ $(window).scroll(function () {
     var brandHeight = $('.brand').height();
     var wScroll = $(this).scrollTop();
 
+    $('.nav-wrapper').height($('nav').height());
+
     if (wScroll <= bannerHeight) {
         $('.cta-container').css({
             'transform': 'translate(0px, ' + (wScroll / 4) + '%)'
         });
+        $('.banner').css({
+            'background-position': 'center ' + (wScroll / 12) + '%' 
+        });
     };
-
-    $('nav').wrap('<div class="nav-wrapper"></div>');
-    $('.nav-wrapper').height($('nav').height());
 
     if (wScroll > navPos) {
         $('.nav-bar').addClass('stk');
-        $('.nav-bar').css({
-            'background': 'linear-gradient(90deg, #CE1126 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #006847 66.66%, #006847)'
-        });
     } else {
         $('.nav-bar').removeClass('stk');
-        $('.nav-bar').css({
-            'background': 'transparent'
-        });
     }
 
 });
