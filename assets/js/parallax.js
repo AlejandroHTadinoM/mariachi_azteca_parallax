@@ -1,11 +1,4 @@
-var navPos = $('.nav-bar').offset().top;
-$('nav').wrap('<div class="nav-wrapper"></div>');
-
 $(window).scroll(function () {
-
-    var windowHeight = $(window).height();
-    var bannerHeight = $('.banner').height();
-    var brandHeight = $('.brand').height();
     var wScroll = $(this).scrollTop();
 
     $('.nav-wrapper').height($('nav').height());

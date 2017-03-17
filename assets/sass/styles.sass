@@ -3,31 +3,12 @@
 @import "normalize"
 @import "skeleton"
 @import "animate"
-@import url('https://fonts.googleapis.com/css?family=Quicksand')
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700')
 
 // Vars
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 $flag-red: #CE1126
 $flag-green: #006847
-
-// Helper class
-–––––––––––––––––––––––––––––––––––––––––––––––––– //
-
-.spacer
-    width: 100%
-    height: 150vh
-
-.stk
-    position: fixed
-    top: 0
-    width: 100%
-    z-index: 10
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .4)
-
-.section-title
-    margin-bottom: 70px
-    padding: 2rem
-    text-align: center
 
 // Custom Animations
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
@@ -53,13 +34,52 @@ $flag-green: #006847
         color: white
         border-color: $flag-green
 
+@-webkit-keyframes hue
+	from
+		-webkit-filter: hue-rotate(0deg)
+	to
+		-webkit-filter: hue-rotate(-360deg)
+
+// Helper class
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
+
+.spacer
+    width: 100%
+    height: 150vh
+
+.stk
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 10
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .4)
+
+.section-title
+    margin-bottom: 70px
+    padding: 2rem
+    text-align: center
+    font-weight: 300
+    text-transform: uppercase
+    color: #444
+
 body
+    font-family: 'Quicksand', sans-serif
     background-color: #FAFAFA
     color: #212121
     box-sizing: border-box
 
 section
     padding: 100px 0 100px 0
+
+.icon
+    width: 100px
+    height: auto
+    background: linear-gradient($flag-green, $flag-red)
+    animation: hue 30s infinite linear
+
+.active
+    border-bottom: 3px solid #444
+
 
 // Section: Banner
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
@@ -76,6 +96,9 @@ section
         position: center center
     overflow: hidden
 
+    h1
+        font-family: serif
+
     .page-title
         font:
             weight: 700
@@ -83,7 +106,13 @@ section
         margin-top: 50%
 
     .btn-flag
-        animation: flag-btn 24s linear infinite !important
+        color: #FAFAFA
+        transition: all .3s ease-in-out
+
+        &:hover
+            color: #212121
+            background-color: #FAFAFA
+
 
 // Navigation bar
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
@@ -101,14 +130,11 @@ section
             margin: 1rem 0
             padding: 1rem 1.5rem
             transition: all .5s linear
-            border-bottom: 3px solid transparent
+            border-bottom: 0 solid #444
 
             a
                 color: #212121
                 text-decoration: none
-
-            &:hover
-                border-bottom: 3px solid #444
 
 // Section: Services
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
@@ -123,15 +149,11 @@ section
         p
             text-align: justify
 
-        &:hover
-            transform: scale(1.1)
-            background-color: #FAFAFA
-
 // Section: Media
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .section-media
-    background: linear-gradient(90deg, rgba(#CE1126, .7) 30.0%, rgba(#FFFFFF, .7) 30.0%, rgba(#FFFFFF, .7) 69.0%, rgba(#006847, .7) 69.0%, rgba(#006847, .7)), url("../img/banner-6.JPG")
+    background: linear-gradient(90deg, rgba(#CE1126, .7) 30.0%, rgba(#FFFFFF, .7) 30.0%, rgba(#FFFFFF, .7) 69.0%, rgba(#006847, .7) 69.0%, rgba(#006847, .7)), url("../img/banner-1.jpg")
         size: cover
         attachment: fixed
         repeat: no-repeat
@@ -141,7 +163,7 @@ section
         margin-top: 25px
         position: relative
         padding-bottom: 56.25%
-
+  
         .video
             position: absolute
             top: 0
@@ -150,16 +172,27 @@ section
             height: 100%
 
     .video-description
-        background-color: #FAFAFA
+        opacity: 0
         transition: all .5s ease-in-out
-
-        &:hover
-            transform: scale(1.2)
+        transform: translate(0, -50%)
 
         .description-wrap
             text-align: center
             padding: 1rem
 
+    .videos:hover .video-description
+        opacity: 1
+        background-color: #FAFAFA
+        transform: translate(0, 0%)
+
+// Section: Band
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
+.section-band
+    .band-icon
+        margin: 0 auto
+
+// Section: Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– //
 footer
     text-align: center
 
@@ -184,7 +217,14 @@ footer
 // Custom Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
-@media (min-width: 400px)
+@media (max-width: 480px)
 
     .nav-item
         display: block
+
+    .section-band
+        text-align: center
+
+    .icon
+        display: none
+    

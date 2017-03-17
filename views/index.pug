@@ -11,7 +11,7 @@ html(lang="es")
 
 	body
 
-		
+		//- Content –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 		header
 			.banner
@@ -21,8 +21,9 @@ html(lang="es")
 							.cta-container
 								h1.page-title Mariachi Azteca de Panam&aacute
 								p.page-lead La tradicion de Mexico en Panam&aacute
-								a(href="#").button.btn-flag Contactos
+								a(href="#contact").button.btn-flag Contactos
 
+		//- Navbar –––––––––––––––––––––––––––––––––––––––––––––––––– //
 		nav.nav-bar
 			.container
 				.row
@@ -34,41 +35,49 @@ html(lang="es")
 								li.nav-item
 									a(href="#media") videos
 								li.nav-item
-									a(href="#") integrantes
+									a(href="#band") integrantes
 								li.nav-item
-									a(href="#") contactos
-		
-		//- Content
+									a(href="#contact") contactos
 
+		//- Service –––––––––––––––––––––––––––––––––––––––––––––––––– //
 		section.section-services#servicios
 			.container
-				h2.section-title Servicios
+				h2.section-title servicios
 
 				.row
 
 					.four.columns
 						.service
-							img(src="//placehold.it/150x150")
-							h3.srvice-title Celebraciones
-							p Amenizamos todo tipo de celebraciones: bodas, cumpleaños, bautizos, comuniones, día de la madre, del padre, serenatas de reconciliación, conquista, serenatas de despedida (o bienvenida) reuniones de empresas, lanzamientos de productos, aperturas de negocios, despedidas de soltero (a), celebración de divorcios y cualquier motivo que para usted sea de celebración.
+							img(src="img/trumpet.png").icon
 
 					.four.columns
 						.service
-							img(src="//placehold.it/150x150")
-							h3.srvice-title A domicilio
-							p Nos trasladamos al lugar donde ud. indique dentro de Panamá, hoteles, restaurantes, domicilio, empresas. Nuestro profesionalismo y experiencia, garantizan un excelente trabajo, todo esto aunado a un grupo de músicos con vasta experiencia.
-
+							img(src="img/note.png").icon
+							
 					.four.columns
 						.service
-							img(src="//placehold.it/150x150")
-							h3.srvice-title Los mejores musicos
-							p Es así queridos amigos que esta familia de músicos, se presenta de una manera particular hacia ustedes, exponiendo en esta página, todo aquello que podemos brindarle para realzar su compromiso. Esperamos sea de vuestro agrado todo lo visto en la misma y podamos pronto estar compartiendo una alegría común. Gracias por preferirnos.
+							img(src="img/guitar.png").icon
+											
+				.row
+					.four.columns
+						h3.srvice-title CELEBRACIONES
+						p Amenizamos todo tipo de celebraciones: bodas, cumpleaños, bautizos, comuniones, día de la madre, del padre, serenatas de reconciliación, conquista, serenatas de despedida (o bienvenida) reuniones de empresas, lanzamientos de productos, aperturas de negocios, despedidas de soltero (a), celebración de divorcios y cualquier motivo que para usted sea de celebración.
+	
+					.four.columns
+						h3.srvice-title SIEMPRE CON USTED
+						p Nos trasladamos al lugar donde ud. indique dentro de Panamá, hoteles, restaurantes, domicilio, empresas. Nuestro profesionalismo y experiencia, garantizan un excelente trabajo, todo esto aunado a un grupo de músicos con vasta experiencia.
+					
+					.four.columns
+						h3.srvice-title LOS MEJORES MUSICOS
+						p Es así queridos amigos que esta familia de músicos, se presenta de una manera particular hacia ustedes, exponiendo en esta página, todo aquello que podemos brindarle para realzar su compromiso. Esperamos sea de vuestro agrado todo lo visto en la misma y podamos pronto estar compartiendo una alegría común. Gracias por preferirnos.
 
+
+		//- Media –––––––––––––––––––––––––––––––––––––––––––––––––– //				
 		section.section-media#media
 			.container
-				h2.section-title Videos
+				h2.section-title videos
 				.row
-					.twelve.columns
+					.six.columns.videos
 						.video-container
 							iframe(src="//www.youtube.com/embed/V2ctpcnv8Es" frameborder="0" allowfullscreen).video
 
@@ -76,8 +85,8 @@ html(lang="es")
 							.description-wrap
 								h4 Si Nos Dejan
 								p Mariachi Azteca de Panam&aacute, en el programa de Augusto, Canal 21 RCM - Panam&aacute
-				.row
-					.twelve.columns
+				
+					.six.columns.videos
 						.video-container
 							iframe(src="//www.youtube.com/embed/vi0r1NtL5y0" frameborder="0" allowfullscreen).video
 
@@ -85,18 +94,41 @@ html(lang="es")
 							.description-wrap
 								h4 Si Nos Dejan
 								p Lenin Rios canta Si Nos Dejan en Vive la Musica
-
-		section.section-band
+		
+		//- Band –––––––––––––––––––––––––––––––––––––––––––––––––– //
+		section.section-band#band
 			.container
-				|Luis Enrique Espinosa: Director y Trompetista
-				|Alejandro Castillo:	Trompeta
-				|Angel Díaz:	Violin
-				|Robert de León:	Bajo
-				|Daniel Méndez:	Requinto y Voz
-				|Jhonny Méndez:	Vihuela y Voz
+				h2.section-title integrantes
+				.row
+					.four.columns
+						img(src="img/trumpet-b.png").band-icon
+						h4 Luis Enrique Espinosa
+						p Director y Trompetista
+					.four.columns
+						img(src="img/trumpet-b.png").band-icon
+						h4 Alejandro Castillo
+						p Trompeta
+					.four.columns
+						img(src="img/violin.png").band-icon
+						h4 Angel Díaz
+						p Violin
+				
+				.row
+					.four.columns
+						img(src="img/guitar-b.png").band-icon
+						h4 Robert de León
+						p Bajo
+					.four.columns
+						img(src="img/vihuela.png").band-icon
+						h4 Daniel Méndez
+						p Requinto y Voz
+					.four.columns
+						img(src="img/vihuela.png").band-icon
+						h4 Jhonny Méndez
+						p Vihuela y Voz
 
-
-		footer.section-footer
+		//- Footer –––––––––––––––––––––––––––––––––––––––––––––––––– //
+		footer.section-footer#contact
 			.container
 				.row
 					.four.columns
@@ -111,8 +143,6 @@ html(lang="es")
 						ul
 							li
 								a(href="tel:+507-6677-5936") +507-6677-5936
-
-		.spacer
 
 		script(src="js/jquery.min.js")
 		script(src="js/functions.js")

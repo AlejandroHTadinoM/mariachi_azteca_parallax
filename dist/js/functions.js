@@ -1,39 +1,33 @@
-/*$(document).ready(function () {
-
-    console.log("banner");
-
-    var bg_img = [
-
-        "/img/banner-1.jpg",
-        "/img/banner-2.jpg",
-        "/img/banner-1.jpg",
-        "/img/banner-1.jpg",
-        "/img/banner-1.jpg", 
-        "/img/banner-1.jpg",
-        "/img/banner-1.jpg",
-        "/img/banner-1.jpg"
-
-    ];
-
-    for (i = 0; i <= bg_img.lenght(); i++) {
-
-        $('.banner').css({
-
-            'background': 'linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), ' + bg_img[i]
-
-        });
-
-    };
-
-});*/
+//Possitions
 var navPos = $('.nav-bar').offset().top;
+var servicePos = $('.service').offset().top;
+
+//Dimentions
+var windowHeight = $(window).height();
+var bannerHeight = $('.banner').height();
+var brandHeight = $('.brand').height();
+
+//Items
+var $navbarItem = $('nav').find('li');
 $('nav').wrap('<div class="nav-wrapper"></div>');
+/*
 
 $(window).scroll(function () {
+    var wScroll = $(this).scrollTop();
 
-    var windowHeight = $(window).height();
-    var bannerHeight = $('.banner').height();
-    var brandHeight = $('.brand').height();
+    if (wScroll >= servicePos) {
+        $navbarItem.animate({
+            top : '5px'
+        });
+    } else {
+        $navbarItem.animate({
+            borderBottomWidth : '0'
+        });
+    }
+});
+
+*/
+$(window).scroll(function () {
     var wScroll = $(this).scrollTop();
 
     $('.nav-wrapper').height($('nav').height());
