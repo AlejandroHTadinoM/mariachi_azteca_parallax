@@ -1,17 +1,11 @@
-/*
-
-$(window).scroll(function () {
-    var wScroll = $(this).scrollTop();
-
-    if (wScroll >= servicePos) {
-        $navbarItem.animate({
-            top : '5px'
-        });
-    } else {
-        $navbarItem.animate({
-            borderBottomWidth : '0'
+$('.nav-item a').on('click', function(event) {
+    if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+            window.location.hash = hash;
         });
     }
 });
-
-*/
