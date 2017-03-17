@@ -31,12 +31,12 @@ gulp.task('jade', function () {
 
 gulp.task('pug', function () {
 	return gulp.src('views/*.pug')
-	.on('error',function(e){
-		console.log(e);
-	})
 	.pipe(pug({
 		pretty: false
 	}))
+	.on('error',function(e){
+		console.log(e);
+	})
 	.pipe(gulp.dest('dist/'));
 });
 
@@ -63,8 +63,7 @@ gulp.task('serve', ['pug', 'sass', 'concat'], function () {
 	bs.init({
 		server: {
 			baseDir: 'dist/'
-		},
-		browser: "firefox"
+		}
 	});
 });
 
