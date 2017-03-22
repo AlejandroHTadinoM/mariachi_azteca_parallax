@@ -14,25 +14,25 @@ $flag-green: #006847
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 @keyframes flag-btn
-    0%
-        background-color: $flag-green
-        color: white
-        border-color: $flag-green
+  0%
+    background-color: $flag-green
+    color: white
+    border-color: $flag-green
 
-    33.33%
-        background-color: white
-        color: #212121
-        border-color: white
+  33.33%
+    background-color: white
+    color: #212121
+    border-color: white
 
-    66.66%
-        background-color: $flag-red
-        color: white
-        border-color: $flag-red
+  66.66%
+    background-color: $flag-red
+    color: white
+    border-color: $flag-red
 
-    100%
-        background-color: $flag-green
-        color: white
-        border-color: $flag-green
+  100%
+    background-color: $flag-green
+    color: white
+    border-color: $flag-green
 
 @-webkit-keyframes hue
 	from
@@ -44,190 +44,187 @@ $flag-green: #006847
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .spacer
-    width: 100%
-    height: 150vh
+  width: 100%
+  height: 150vh
 
 .stk
-    position: fixed
-    top: 0
-    width: 100%
-    z-index: 10
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .4)
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 10
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .4)
 
 .section-title
-    margin-bottom: 70px
-    padding: 2rem
-    text-align: center
-    font-weight: 300
-    text-transform: uppercase
-    color: #444
+  margin-bottom: 70px
+  padding: 2rem
+  text-align: center
+  font-weight: 300
+  text-transform: uppercase
+  color: #444
 
 body
-    font-family: 'Quicksand', sans-serif
-    background-color: #FAFAFA
-    color: #212121
-    box-sizing: border-box
+  font-family: 'Quicksand', sans-serif
+  background-color: #FAFAFA
+  color: #212121
+  box-sizing: border-box
 
 section
-    padding: 100px 0 100px 0
+  padding: 100px 0 100px 0
 
 .icon
-    width: 100px
-    height: auto
-    background: linear-gradient($flag-green, $flag-red)
-    animation: hue 30s infinite linear
+  width: 100px
+  height: auto
+  background: linear-gradient($flag-green, $flag-red)
+  animation: hue 30s infinite linear
 
 .active
-    border-bottom: 3px solid #444
+  border-bottom: 3px solid #444
 
 
 // Section: Banner
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .banner
-    height: 100vh
-    width: 100%
-    background-color: #212121
+  height: 100vh
+  width: 100%
+  background-color: #212121
+  color: #FAFAFA
+  background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .3)), url("../img/banner-bg--bw.jpg")
+      size: cover
+      attachment: fixed
+      repeat: no-repeat
+      position: center center
+  overflow: hidden
+
+  h1
+    font-family: serif
+
+  .page-title
+    font:
+      weight: 700
+      size: 5em
+    margin-top: 50%
+
+  .btn-flag
     color: #FAFAFA
-    background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .3)), url("../img/banner-bg--bw.jpg")
-        size: cover
-        attachment: fixed
-        repeat: no-repeat
-        position: center center
-    overflow: hidden
+    transition: all .3s ease-in-out
 
-    h1
-        font-family: serif
-
-    .page-title
-        font:
-            weight: 700
-            size: 5em
-        margin-top: 50%
-
-    .btn-flag
-        color: #FAFAFA
-        transition: all .3s ease-in-out
-
-        &:hover
-            color: #212121
-            background-color: #FAFAFA
+    &:hover
+      color: #212121
+      background-color: #FAFAFA
 
 
 // Navigation bar
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .nav-bar
-    transition: all .5s ease-in-out !important
-    background: linear-gradient(90deg, $flag-red 30.0%, #FFFFFF 30.0%, #FFFFFF 69.0%, $flag-green 69.0%, $flag-green)
+  transition: all .5s ease-in-out !important
+  background: linear-gradient(90deg, $flag-red 30.0%, #FFFFFF 30.0%, #FFFFFF 69.0%, $flag-green 69.0%, $flag-green)
 
-    .nav-wrap
-        text-align: center
-        padding-top: 1rem
+  .nav-wrap
+    text-align: center
+    padding-top: 1rem
 
-        .nav-item
-            display: inline-block
-            margin: 1rem 0
-            padding: 1rem 1.5rem
-            transition: all .5s linear
-            border-bottom: 0 solid #444
+    .nav-item
+      display: inline-block
+      margin: 1rem 0
+      padding: 1rem 1.5rem
+      transition: all .5s linear
+      border-bottom: 0 solid #444
 
-            a
-                color: #212121
-                text-decoration: none
+      a
+        color: #212121
+        text-decoration: none
 
 // Section: Services
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .section-services
-    text-align: center
+  text-align: center
 
-    .service
-        margin-bottom: 60px
-        transition: all .5s ease-in-out
+  .service
+    margin-bottom: 60px
+    transition: all .5s ease-in-out
 
-        p
-            text-align: justify
+    p
+      text-align: justify
 
 // Section: Media
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 .section-media
-    background: linear-gradient(90deg, rgba($flag-red, .7) 30.0%, rgba(#FFFFFF, .7) 30.0%, rgba(#FFFFFF, .7) 69.0%, rgba($flag-green, .7) 69.0%, rgba($flag-green, .7)), url("../img/banner-1.jpg")
-        size: cover
-        attachment: fixed
-        repeat: no-repeat
-        position: center center
+  background: linear-gradient(90deg, rgba($flag-red, .7) 30.0%, rgba(#FFFFFF, .7) 30.0%, rgba(#FFFFFF, .7) 69.0%, rgba($flag-green, .7) 69.0%, rgba($flag-green, .7)), url("../img/banner-1.jpg")
+    size: cover
+    attachment: fixed
+    repeat: no-repeat
+    position: center center
 
-    .video-container
-        margin-top: 25px
-        position: relative
-        padding-bottom: 56.25%
-  
-        .video
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
+  .video-container
+    margin-top: 25px
+    position: relative
+    padding-bottom: 56.25%
 
-    .video-description
-        opacity: 0
-        transition: all .5s ease-in-out
-        transform: translate(0, -50%)
+    .video
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
 
-        .description-wrap
-            text-align: center
-            padding: 1rem
+  .video-description
+    opacity: 0
+    transition: all .5s ease-in-out
+    transform: translate(0, -50%)
 
-    .videos:hover .video-description
-        opacity: 1
-        background-color: #FAFAFA
-        transform: translate(0, 0%)
+    .description-wrap
+      text-align: center
+      padding: 1rem
+
+  .videos:hover .video-description
+    opacity: 1
+    background-color: #FAFAFA
+    transform: translate(0, 0%)
 
 // Section: Band
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 .section-band
-    .band-icon
-        margin: 0 auto
+  .band-icon
+    margin: 0 auto
 
 // Section: Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 footer
-    text-align: center
-    background: linear-gradient(90deg, rgba($flag-red, 1) 30.0%, rgba(#FFFFFF, 1) 30.0%, rgba(#FFFFFF, 1) 69.0%, rgba($flag-green, 1) 69.0%, rgba($flag-green, 1))
+  background: linear-gradient(90deg, rgba($flag-red, .4) 30.0%, rgba(#FFFFFF, .4) 30.0%, rgba(#FFFFFF, .4) 69.0%, rgba($flag-green, .4) 69.0%, rgba($flag-green, .4))
 
-    ul
-        list-style-type: none
+  ul
+    list-style-type: none
 
-        li
-            margin-top: 2rem
+    li
+      text-align: center
 
-            a
-                text-decoration: none
-                color: #444
-                padding: 2rem 2rem
-                font-size: 1.2em
-                margin: 0 1rem
-                transition: all .3s ease-in-out
+    a
+      text-decoration: none
+      color: #444
+      padding: 1rem 2rem
+      font-size: 1.2em
+      transition: all .3s ease-in-out
+      border-radius: 0.2em
 
-                &:hover
-                    color: #212121
-                    background: rgba(255, 255, 255, .4)
-                    border-radius: 0.4em
-                    transform: scale(2)
+      &:hover
+        color: #212121
+        background: rgba(255, 255, 255, .2)
 
 // Custom Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– //
 
 @media (max-width: 480px)
 
-    .nav-item
-        display: block
+  .nav-item
+    display: block
 
-    .section-band
-        text-align: center
+  .section-band
+    text-align: center
 
-    .icon
-        display: none
+  .icon
+    display: none
     

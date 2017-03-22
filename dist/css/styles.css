@@ -3331,24 +3331,21 @@ section {
   margin: 0 auto; }
 
 footer {
-  text-align: center;
-  background: linear-gradient(90deg, #ce1126 30%, white 30%, white 69%, #006847 69%, #006847); }
+  background: linear-gradient(90deg, rgba(206, 17, 38, 0.4) 30%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 69%, rgba(0, 104, 71, 0.4) 69%, rgba(0, 104, 71, 0.4)); }
   footer ul {
     list-style-type: none; }
     footer ul li {
-      margin-top: 2rem; }
-      footer ul li a {
-        text-decoration: none;
-        color: #444;
-        padding: 2rem 2rem;
-        font-size: 1.2em;
-        margin: 0 1rem;
-        transition: all .3s ease-in-out; }
-        footer ul li a:hover {
-          color: #212121;
-          background: rgba(255, 255, 255, 0.4);
-          border-radius: 0.4em;
-          transform: scale(2); }
+      text-align: center; }
+    footer ul a {
+      text-decoration: none;
+      color: #444;
+      padding: 1rem 2rem;
+      font-size: 1.2em;
+      transition: all .3s ease-in-out;
+      border-radius: 0.2em; }
+      footer ul a:hover {
+        color: #212121;
+        background: rgba(255, 255, 255, 0.2); }
 
 @media (max-width: 480px) {
   .nav-item {

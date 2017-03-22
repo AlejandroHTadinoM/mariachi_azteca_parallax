@@ -8,5 +8,5 @@ var brandHeight = $('.brand').height();
 //Items
 var $navbarItem = $('nav').find('li');
 $('nav').wrap('<div class="nav-wrapper"></div>');
-var fotter = $('footer');
+var footer = $('footer');
 var footerItems = footer.find('a');

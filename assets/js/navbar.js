@@ -9,9 +9,3 @@ $('.nav-item a').on('click', function(event) {
         });
     }
 });
-
-if ($(window).width() <= 480) {
-	footerItems.css({
-		'display': 'block';
-	})
-};
