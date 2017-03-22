@@ -8,6 +8,8 @@ var brandHeight = $('.brand').height();
 //Items
 var $navbarItem = $('nav').find('li');
 $('nav').wrap('<div class="nav-wrapper"></div>');
+var fotter = $('footer');
+var footerItems = footer.find('a');
 $('.nav-item a').on('click', function(event) {
     if (this.hash !== "") {
         event.preventDefault();
@@ -19,6 +21,12 @@ $('.nav-item a').on('click', function(event) {
         });
     }
 });
+
+if ($(window).width() <= 480) {
+	footerItems.css({
+		'display': 'block';
+	})
+};
 $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
     $('.nav-wrapper').height($('nav').height());
