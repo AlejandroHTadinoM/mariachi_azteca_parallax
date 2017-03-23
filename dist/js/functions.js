@@ -26,7 +26,7 @@ $(window).scroll(function () {
     $('.nav-wrapper').height($('nav').height());
     if (wScroll <= bannerHeight) {
         $('.cta-container').css({
-            'transform': 'translate(0px, ' + (wScroll / 4) + '%)'
+            'transform': 'translate(0px, ' + (wScroll / 6) + '%)'
         });
         $('.banner').css({
             'background-position': 'center ' + (wScroll / 12) + '%' 
