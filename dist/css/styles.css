@@ -3257,7 +3257,7 @@ section {
   width: 100%;
   background-color: #212121;
   color: #FAFAFA;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("../img/banner-bg--bw.jpg");
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("../img/banner-bg.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -3303,7 +3303,7 @@ section {
       text-align: justify; }
 
 .section-media {
-  background: linear-gradient(90deg, rgba(206, 17, 38, 0.7) 30%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.7) 69%, rgba(0, 104, 71, 0.7) 69%, rgba(0, 104, 71, 0.7)), url("../img/banner-1.jpg");
+  background: linear-gradient(90deg, rgba(206, 17, 38, 0.7) 30%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.7) 69%, rgba(0, 104, 71, 0.7) 69%, rgba(0, 104, 71, 0.7)), url("../img/img-4.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
