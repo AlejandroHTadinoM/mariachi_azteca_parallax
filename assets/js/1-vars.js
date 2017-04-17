@@ -10,3 +10,6 @@ var $navbarItem = $('nav').find('li');
 $('nav').wrap('<div class="nav-wrapper"></div>');
 var footer = $('footer');
 var footerItems = footer.find('a');
+var galleryImg = $('.gallery-thbm');
+var galleryView = $('#img-view');
+var sectionGallery = $('.gallery');

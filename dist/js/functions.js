@@ -10,6 +10,23 @@ var $navbarItem = $('nav').find('li');
 $('nav').wrap('<div class="nav-wrapper"></div>');
 var footer = $('footer');
 var footerItems = footer.find('a');
+var galleryImg = $('.gallery-thbm');
+var galleryView = $('#img-view');
+var sectionGallery = $('.gallery');
+galleryImg.click(function () {
+	var imgPath = $(this).attr('src');
+	console.log(imgPath);
+	galleryView.fadeOut(500, function () {
+		$(this).attr('src', imgPath);
+		sectionGallery.css({
+			'background' : 'linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(' + imgPath + ')',
+			'background-repeat': 'no-repeat',
+			'background-size' : 'cover',
+			'background-position' : 'center'
+		})
+
+	}).fadeIn(500);
+});
 $('.nav-item a').on('click', function(event) {
     if (this.hash !== "") {
         event.preventDefault();
