@@ -9,6 +9,5 @@ galleryImg.click(function () {
 			'background-size' : 'cover',
 			'background-position' : 'center'
 		})
-
 	}).fadeIn(500);
 });
